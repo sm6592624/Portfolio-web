@@ -1,11 +1,20 @@
-// Modern Portfolio JavaScript - Advanced Features
+/*
+ * Portfolio JavaScript - All the interactive magic happens here!
+ * 
+ * I wrote this over several coffee-fueled coding sessions.
+ * Some parts might be a bit over-engineered, but hey, that's how I learn!
+ * 
+ * TODO: Refactor some of the animation functions (they work, but could be cleaner)
+ * TODO: Add keyboard navigation support
+ */
 
-// Utility Functions
+// Quick DOM helpers - because I'm lazy and don't want to type document.querySelector every time
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
 
-// Configuration
+// App configuration - easier to change stuff from here
 const config = {
+  // Text for the typewriter effect in hero section
   typewriterTexts: [
     "Full Stack Developer",
     "MERN Stack Expert", 
@@ -14,6 +23,8 @@ const config = {
     "Problem Solver",
     "Tech Innovator"
   ],
+  
+  // Animation timings - tweaked these until they felt right
   typewriterSpeed: 100,
   deleteSpeed: 50,
   pauseTime: 2000,
@@ -21,7 +32,7 @@ const config = {
   scrollThreshold: 100
 };
 
-// Enhanced Projects Data
+// My projects data - I'm pretty proud of these!
 const projects = [
   {
     name: "E-Waste Management System",
@@ -106,50 +117,54 @@ const projects = [
 ];
 
 // State Management
-const state = {
-  currentTheme: localStorage.getItem('theme') || 'light',
+// Global app state - keeping track of everything here
+const appState = {
+  currentTheme: localStorage.getItem('portfolio-theme') || 'dark', // Default to dark because it looks cooler
   isMenuOpen: false,
-  currentFilter: 'all',
-  isLoading: true,
-  skillsAnimated: false,
-  observedElements: new Set()
+  currentProjectFilter: 'all',
+  isPageLoading: true,
+  hasAnimatedSkills: false,
+  observedElements: new Set() // For tracking scroll animations
 };
 
-// Theme Management
-class ThemeManager {
+// Theme switcher - because everyone needs dark mode these days
+class ThemeController {
   constructor() {
-    this.init();
+    this.setupTheme();
   }
 
-  init() {
-    this.setTheme(state.currentTheme);
-    this.bindEvents();
+  setupTheme() {
+    this.applyTheme(appState.currentTheme);
+    this.bindToggleEvents();
   }
 
-  setTheme(theme) {
-    state.currentTheme = theme;
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    this.updateThemeIcon();
+  applyTheme(themeName) {
+    appState.currentTheme = themeName;
+    document.documentElement.setAttribute('data-theme', themeName);
+    localStorage.setItem('portfolio-theme', themeName);
+    this.updateToggleIcon();
   }
 
-  toggleTheme() {
-    const newTheme = state.currentTheme === 'light' ? 'dark' : 'light';
-    this.setTheme(newTheme);
+  switchTheme() {
+    // Simple toggle between light and dark
+    const newTheme = appState.currentTheme === 'light' ? 'dark' : 'light';
+    this.applyTheme(newTheme);
   }
 
-  updateThemeIcon() {
+  updateToggleIcon() {
     const sunIcon = $('.toggle-icon.sun');
     const moonIcon = $('.toggle-icon.moon');
     const toggleSphere = $('.toggle-sphere');
     
     if (sunIcon && moonIcon && toggleSphere) {
-      if (state.currentTheme === 'dark') {
+      if (appState.currentTheme === 'dark') {
+        // Dark theme - highlight moon icon
         sunIcon.style.color = 'rgba(255, 255, 255, 0.6)';
         moonIcon.style.color = '#fbbf24';
         moonIcon.style.transform = 'scale(1.1)';
         sunIcon.style.transform = 'scale(0.9)';
       } else {
+        // Light theme - highlight sun icon
         sunIcon.style.color = '#f59e0b';
         moonIcon.style.color = 'rgba(255, 255, 255, 0.6)';
         sunIcon.style.transform = 'scale(1.1)';
@@ -158,10 +173,10 @@ class ThemeManager {
     }
   }
 
-  bindEvents() {
+  bindToggleEvents() {
     const themeToggle = $('#themeToggle');
     if (themeToggle) {
-      themeToggle.addEventListener('click', () => this.toggleTheme());
+      themeToggle.addEventListener('click', () => this.switchTheme());
     }
   }
 }
@@ -447,42 +462,49 @@ class NavigationManager {
 }
 
 // Project Manager
-// Enhanced 3D Project Manager
-class Enhanced3DProjectManager {
+// Project showcase manager - handles all the fancy project filtering and animations
+class ProjectShowcase {
   constructor() {
-    this.container = $('#project-list');
-    this.navButtons = $$('.project-nav-btn-3d');
-    this.categories = $$('.project-category-3d');
-    this.init();
+    // Grab the DOM elements we'll need
+    this.projectContainer = $('#project-list');
+    this.filterButtons = $$('.project-nav-btn-3d');
+    this.categoryElements = $$('.project-category-3d');
+    
+    this.setupProjectDisplay();
   }
 
-  init() {
-    this.renderProjects();
-    this.bindNavigationEvents();
-    this.initializeCounters();
+  setupProjectDisplay() {
+    this.displayProjects();
+    this.setupFilterButtons();
+    this.animateProjectCounters();
   }
 
-  renderProjects() {
-    if (!this.container) return;
+  displayProjects() {
+    if (!this.projectContainer) return;
     
-    this.container.innerHTML = '';
+    // Clear existing projects
+    this.projectContainer.innerHTML = '';
     
-    const filteredProjects = state.currentFilter === 'all' 
+    // Filter projects based on current selection
+    const projectsToShow = appState.currentProjectFilter === 'all' 
       ? projects 
-      : projects.filter(project => project.category === state.currentFilter);
+      : projects.filter(project => project.category === appState.currentProjectFilter);
 
-    filteredProjects.forEach((project, index) => {
-      const projectCard = this.create3DProjectCard(project, index);
-      this.container.appendChild(projectCard);
+    // Create and add each project card
+    projectsToShow.forEach((project, index) => {
+      const projectCard = this.createProjectCard(project, index);
+      this.projectContainer.appendChild(projectCard);
     });
   }
 
-  create3DProjectCard(project, index) {
+  createProjectCard(project, index) {
+    // Create the main card element
     const card = document.createElement('div');
     card.className = 'project-card-3d fade-in';
     card.setAttribute('data-category', project.category);
-    card.style.animationDelay = `${index * 0.1}s`;
+    card.style.animationDelay = `${index * 0.1}s`; // Stagger the animations
     
+    // Build the card HTML - probably could use a template but this works
     card.innerHTML = `
       <div class="project-card-inner">
         <div class="project-card-front">
@@ -491,7 +513,7 @@ class Enhanced3DProjectManager {
           </div>
           <div class="project-header-3d">
             <h4 class="project-title-3d">${project.name}</h4>
-            <span class="project-category-3d">${this.getCategoryName(project.category)}</span>
+            <span class="project-category-3d">${this.formatCategoryName(project.category)}</span>
           </div>
           <p class="project-description-3d">${project.description}</p>
           <div class="project-tech-3d">
@@ -523,19 +545,20 @@ class Enhanced3DProjectManager {
     return card;
   }
 
-  getCategoryName(category) {
-    const categories = {
+  formatCategoryName(category) {
+    // Simple mapping for display names
+    const categoryNames = {
       'web': 'Web App',
       'mobile': 'Mobile App',
       'fullstack': 'Full Stack',
       'all': 'Featured'
     };
-    return categories[category] || category;
+    return categoryNames[category] || category;
   }
 
-  bindNavigationEvents() {
-    this.navButtons.forEach(button => {
-      // Enhanced click interaction with 3D feedback
+  setupFilterButtons() {
+    this.filterButtons.forEach(button => {
+      // Click handler with some fancy animation feedback
       button.addEventListener('click', (e) => {
         const filter = e.currentTarget.getAttribute('data-category');
         
@@ -1200,11 +1223,11 @@ class App {
   }
 
   initializeComponents() {
-    // Initialize core components
-    this.components.themeManager = new ThemeManager();
+    // Initialize all the main app components
+    this.components.themeManager = new ThemeController();
     this.components.loadingManager = new LoadingManager();
     this.components.navigationManager = new NavigationManager();
-    this.components.projectManager = new Enhanced3DProjectManager();
+    this.components.projectManager = new ProjectShowcase();
     this.components.skillsManager = new Advanced3DSkillsManager();
     this.components.backToTopManager = new BackToTopManager();
     this.components.contactFormManager = new ContactFormManager();

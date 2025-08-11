@@ -1,4 +1,16 @@
-/* Advanced 3D Skills Section */
+/*
+ * Additional Portfolio Styles - The fancy project section
+ * 
+ * I split this into a separate file because the main CSS was getting huge.
+ * This file contains all the project showcase animations and 3D effects.
+ * 
+ * Warning: Some of these animations might be overkill, but they look cool!
+ */
+
+/* ========================================
+   SKILLS SECTION - 3D Card Effects
+======================================== */
+
 .skills {
   background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
   position: relative;
@@ -6,7 +18,7 @@
   padding: var(--space-4xl) 0;
 }
 
-/* Dark theme adjustments */
+/* Darker background for dark theme */
 [data-theme="dark"] .skills {
   background: linear-gradient(135deg, #030014 0%, #0a0a1a 50%, #0f1629 100%);
 }
@@ -754,14 +766,18 @@
   animation: pulseGlow 4s ease-in-out infinite;
 }
 
+/* Project filter buttons - these took forever to get right */
 .project-nav-btn-3d {
   display: flex;
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-lg) var(--space-xl);
+  
+  /* Layered background for depth effect */
   background: 
     linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)),
     linear-gradient(45deg, rgba(6, 182, 212, 0.1), rgba(14, 116, 144, 0.1));
+  
   border: 2px solid rgba(255, 255, 255, 0.15);
   border-radius: var(--radius-xl);
   color: rgba(255, 255, 255, 0.9);

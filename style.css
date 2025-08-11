@@ -1,6 +1,79 @@
-/* CSS Custom Properties */
+/*
+ * Personal Portfolio Styles
+ * Author: Saransh Mishra
+ * 
+ * I spent way too many late nights perfecting these animations!
+ * Feel free to use this code, just give me a shoutout :)
+ * 
+ * Note: I may have gone overboard with the 3D effects...
+ */
+
 /* ========================================
-   3D SKILLS SECTION - ADVANCED UI
+   ROOT VARIABLES - Color Scheme & Spacing
+======================================== */
+
+:root {
+  /* Colors - I changed these about 100 times */
+  --primary-color: #06b6d4;
+  --secondary-color: #0891b2;
+  --accent-color: #0e7490;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --text-primary: #f8fafc;
+  --text-secondary: rgba(248, 250, 252, 0.8);
+  
+  /* Spacing - consistent spacing system */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  
+  /* Border radius - I like rounded corners */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Transitions - smooth animations everywhere */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Shadows - for that depth effect */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ========================================
+   GLOBAL RESET & BASE STYLES
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   SKILLS SECTION - The fun 3D stuff begins here!
 ======================================== */
 
 /* Base 3D Setup */
