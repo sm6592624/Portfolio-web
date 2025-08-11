@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Saransh Mishra | Full Stack Developer</title>
+  <meta name="description" content="Professional portfolio of Saransh Mishra - Full Stack Developer specializing in MERN Stack, Machine Learning,Product Design, and Modern Web Technologies">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles_continuation.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loader" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">SM</div>
+      <div class="loader-text">Loading Portfolio...</div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Elements -->
+  <div class="bg-animation">
+    <div class="floating-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+      <div class="shape shape-5"></div>
+    </div>
+  </div>
+
+  <header class="header-3d">
+    <nav class="navbar-3d">
+      <div class="nav-container-3d">
+        <!-- Advanced 3D Logo -->
+        <div class="logo-3d">
+          <div class="logo-cube">
+            <div class="cube-face front">
+              <span class="logo-text">S</span>
+            </div>
+            <div class="cube-face back">
+              <span class="logo-text">M</span>
+            </div>
+            <div class="cube-face right">
+              <span class="logo-dot">.</span>
+            </div>
+            <div class="cube-face left">
+              <span class="logo-text">S</span>
+            </div>
+            <div class="cube-face top">
+              <span class="logo-text">M</span>
+            </div>
+            <div class="cube-face bottom">
+              <span class="logo-dot">.</span>
+            </div>
+          </div>
+          <div class="logo-text-container">
+            <span class="logo-main-text">Saransh</span>
+            <span class="logo-subtitle">Portfolio</span>
+          </div>
+        </div>
+        
+        <!-- Advanced 3D Navigation Links -->
+        <ul class="nav-links-3d">
+          <li class="nav-item-3d">
+            <a href="#home" class="nav-link-3d active" data-text="Home">
+              <span class="nav-icon"><i class="fas fa-home"></i></span>
+              <span class="nav-text">Home</span>
+              <div class="nav-background"></div>
+            </a>
+          </li>
+          <li class="nav-item-3d">
+            <a href="#about" class="nav-link-3d" data-text="About">
+              <span class="nav-icon"><i class="fas fa-user"></i></span>
+              <span class="nav-text">About</span>
+              <div class="nav-background"></div>
+            </a>
+          </li>
+          <li class="nav-item-3d">
+            <a href="#skills" class="nav-link-3d" data-text="Skills">
+              <span class="nav-icon"><i class="fas fa-code"></i></span>
+              <span class="nav-text">Skills</span>
+              <div class="nav-background"></div>
+            </a>
+          </li>
+          <li class="nav-item-3d">
+            <a href="#projects" class="nav-link-3d" data-text="Projects">
+              <span class="nav-icon"><i class="fas fa-laptop-code"></i></span>
+              <span class="nav-text">Projects</span>
+              <div class="nav-background"></div>
+            </a>
+          </li>
+          <li class="nav-item-3d">
+            <a href="#experience" class="nav-link-3d" data-text="Experience">
+              <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+              <span class="nav-text">Experience</span>
+              <div class="nav-background"></div>
+            </a>
+          </li>
+          <li class="nav-item-3d">
+            <a href="#contact" class="nav-link-3d" data-text="Contact">
+              <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+              <span class="nav-text">Contact</span>
+              <div class="nav-background"></div>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Advanced 3D Controls -->
+        <div class="nav-controls-3d">
+          <button class="theme-toggle-3d" id="themeToggle" title="Toggle Dark Mode" aria-label="Toggle Dark Mode">
+            <div class="toggle-container">
+              <div class="toggle-icon sun">
+                <i class="fas fa-sun"></i>
+              </div>
+              <div class="toggle-icon moon">
+                <i class="fas fa-moon"></i>
+              </div>
+              <div class="toggle-sphere"></div>
+            </div>
+          </button>
+          
+          <div class="nav-status-indicator">
+            <div class="status-dot"></div>
+            <span class="status-text">Online</span>
+          </div>
+          
+          <button class="mobile-menu-toggle-3d" id="mobileToggle" title="Toggle Mobile Menu" aria-label="Toggle Mobile Menu">
+            <div class="hamburger-lines">
+              <span class="line line-1"></span>
+              <span class="line line-2"></span>
+              <span class="line line-3"></span>
+            </div>
+            <div class="menu-text">Menu</div>
+          </button>
+        </div>
+      </div>
+      
+      <!-- 3D Background Effects -->
+      <div class="nav-bg-effects">
+        <div class="nav-particle nav-particle-0"></div>
+        <div class="nav-particle delay-1"></div>
+        <div class="nav-particle particle-3"></div>
+        <div class="nav-particle particle-style-3"></div>
+        <div class="nav-particle custom-nav-particle"></div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-greeting">
+            <span class="greeting-text">Hello, I'm</span>
+          </div>
+          <h1 class="hero-title">
+            <span class="name-text">Saransh Mishra</span>
+          </h1>
+          <div class="hero-subtitle">
+            <span class="typewriter-container">
+              <span class="typewriter"></span>
+              <span class="cursor"></span>
+            </span>
+          </div>
+          <p class="hero-description">
+            Passionate Full Stack Developer crafting digital experiences with modern technologies. 
+            Specializing in MERN Stack, Machine Learning, Product Design, and Modern Web Technologies, and creating scalable web solutions.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              <i class="fas fa-code"></i>
+              View My Work
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <i class="fas fa-envelope"></i>
+              Get In Touch
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/sm6592624" target="_blank" rel="noopener" class="social-link" title="GitHub Profile" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="www.linkedin.com/in/saransh-mishra-20ab00220" target="_blank" rel="noopener" class="social-link" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://x.com/sm6592624" target="_blank" rel="noopener" class="social-link" title="Twitter Profile" aria-label="Twitter Profile">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="mailto:sm6592624@gmail.com" target="_blank" rel="noopener"  class="social-link" title="Send Email" aria-label="Send Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="profile-card">
+            <div class="profile-image">
+              <img src="image.png" alt="Saransh Mishra - Full Stack Developer" loading="lazy" />
+            </div>
+            <div class="profile-info">
+              <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>Available for hire</span>
+              </div>
+            </div>
+          </div>
+          <div class="floating-cards">
+            <div class="tech-card card-1">
+              <i class="fab fa-react"></i>
+              <span>React</span>
+            </div>
+            <div class="tech-card card-2">
+              <i class="fab fa-node-js"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-card card-3"> 
+              <i class="fas fa-database"></i>
+              <span>MongoDB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-arrow">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get to know me</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <div class="about-description">
+              <p>
+                I'm a passionate full-stack developer with over 3 years of experience in building 
+                modern web applications and Product solutions. My journey in technology started with 
+                curiosity about how things work, which led me to master various programming languages 
+                and frameworks.
+              </p> 
+              <p>
+                I specialize in the MERN stack and Machine Learning, with a strong focus on 
+                creating user-centric applications that solve real-world problems. I believe in 
+                writing clean, maintainable code and staying updated with the latest industry trends.
+              </p>
+            </div>
+            <div class="about-stats">
+              <div class="stat-item">
+                <h3 class="stat-number">4+</h3>
+                <p class="stat-label">Projects Completed</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="stat-number">1+</h3>
+                <p class="stat-label">Years Experience</p>
+              </div>
+              <div class="stat-item">
+                <h3 class="stat-number">6+</h3>
+                <p class="stat-label">Technologies</p>
+              </div>
+            </div>
+            <div class="about-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-download"></i>
+                Download CV
+              </a>
+              <a href="#experience" class="btn btn-outline">
+                <i class="fas fa-briefcase"></i>
+                View Experience
+              </a>
+            </div>
+          </div>
+          <div class="about-image">
+            <div class="image-container">
+              <div class="code-snippet">
+                <div class="code-header">
+                  <div class="dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                  <span class="filename">developer.js</span>
+                </div>
+                <div class="code-content">
+                  <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+  <span class="property">name</span>: <span class="string">"Saransh Mishra"</span>,
+  <span class="property">skills</span>: [<span class="string">"React"</span>, <span class="string">"Node.js"</span>, <span class="string">"MongoDB"</span>],
+  <span class="property">passionate</span>: <span class="boolean">true</span>, 
+  <span class="property">quickLearner</span>: <span class="boolean">true</span>,
+  <span class="property">problemSolver</span>: <span class="boolean">true</span>
+};</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Skills Section -->
+<section id="skills" class="skills section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-subtitle">What I work with</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-description">A comprehensive toolkit for building modern digital Technological Product solutions</p>
+    </div>
+    
+    <!-- Enhanced Skills Navigation with 3D Effects -->
+    <div class="skills-navigation-3d">
+      <button class="skill-nav-btn-3d active" data-category="all">
+        <div class="btn-face btn-front">
+          <i class="fas fa-layer-group"></i>
+          <span>All Skills</span>
+        </div>
+        <div class="btn-face btn-back">
+          <span>View All</span>
+        </div>
+      </button>
+      <button class="skill-nav-btn-3d" data-category="frontend">
+        <div class="btn-face btn-front">
+          <i class="fas fa-palette"></i>
+          <span>Frontend</span>
+        </div>
+        <div class="btn-face btn-back">
+          <span>UI/UX</span>
+        </div>
+      </button>
+      <button class="skill-nav-btn-3d" data-category="backend">
+        <div class="btn-face btn-front">
+          <i class="fas fa-server"></i>
+          <span>Backend</span>
+        </div>
+        <div class="btn-face btn-back">
+          <span>APIs</span>
+        </div>
+      </button>
+      <button class="skill-nav-btn-3d" data-category="mobile">
+        <div class="btn-face btn-front">
+          <i class="fas fa-brain"></i>
+          <span>Machine Learning</span>
+        </div>
+        <div class="btn-face btn-back">
+          <span>Apps</span>
+        </div>
+      </button>
+      <button class="skill-nav-btn-3d" data-category="tools">
+        <div class="btn-face btn-front">
+          <i class="fas fa-tools"></i>
+          <span>Tools</span>
+        </div>
+        <div class="btn-face btn-back">
+          <span>DevOps</span>
+        </div>
+      </button>
+    </div>
+    
+    <div class="skills-content-3d">
+      <!-- 3D Skills Showcase -->
+      <div class="skills-showcase-3d">
+        
+        <!-- Frontend Skills with 3D Cards -->
+        <div class="skill-category-3d active" data-category="frontend">
+          <div class="category-header-3d">
+            <div class="category-icon-3d">
+              <div class="icon-cube">
+                <div class="cube-face front"><i class="fas fa-code"></i></div>
+                <div class="cube-face back"><i class="fas fa-palette"></i></div>
+                <div class="cube-face right"><i class="fas fa-paint-brush"></i></div>
+                <div class="cube-face left"><i class="fas fa-desktop"></i></div>
+                <div class="cube-face top"><i class="fas fa-magic"></i></div>
+                <div class="cube-face bottom"><i class="fas fa-laptop-code"></i></div>
+              </div>
+            </div>
+            <div class="category-title-3d">
+              <h3>Frontend Development</h3>
+              <span class="category-subtitle">Crafting Beautiful User Experiences</span>
+            </div>
+            <div class="category-stats-3d">
+              <div class="stat-circle">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Skills</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skills-matrix-3d">
+            <!-- HTML5 Skill Card -->
+            <div class="skill-card-3d expert" data-skill="html">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="skill-header-3d">
+                    <div class="skill-icon-3d">
+                      <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="skill-level-badge expert">Expert</div>
+                  </div>
+                  <h4 class="skill-name-3d">HTML5</h4>
+                  <p class="skill-description-3d">Semantic markup, accessibility standards</p>
+                  <div class="skill-progress-3d">
+                    <div class="progress-sphere" data-percentage="95">
+                      <div class="sphere-inner">
+                        <span class="percentage-text">95%</span>
+                      </div>
+                      <div class="sphere-glow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="detailed-info">
+                    <h5>Key Expertise</h5>
+                    <ul>
+                      <li>Semantic HTML Structure</li>
+                      <li>Web Accessibility (ARIA)</li>
+                      <li>Modern HTML5 APIs</li>
+                      <li>SEO Optimization</li>
+                    </ul>
+                    <div class="experience-years">1+ Years</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CSS3 Skill Card -->
+            <div class="skill-card-3d expert" data-skill="css">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="skill-header-3d">
+                    <div class="skill-icon-3d">
+                      <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-level-badge expert">Expert</div>
+                  </div>
+                  <h4 class="skill-name-3d">CSS3</h4>
+                  <p class="skill-description-3d">Advanced styling, animations, layouts</p>
+                  <div class="skill-progress-3d">
+                    <div class="progress-sphere" data-percentage="90">
+                      <div class="sphere-inner">
+                        <span class="percentage-text">90%</span>
+                      </div>
+                      <div class="sphere-glow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="detailed-info">
+                    <h5>Key Expertise</h5>
+                    <ul>
+                      <li>CSS Grid & Flexbox</li>
+                      <li>CSS Animations</li>
+                      <li>Responsive Design</li>
+                      <li>CSS Variables</li>
+                    </ul>
+                    <div class="experience-years">1+ Years</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- JavaScript Skill Card -->
+            <div class="skill-card-3d advanced" data-skill="javascript">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="skill-header-3d">
+                    <div class="skill-icon-3d">
+                      <i class="fab fa-js-square"></i>
+                    </div>
+                    <div class="skill-level-badge advanced">Advanced</div>
+                  </div>
+                  <h4 class="skill-name-3d">JavaScript</h4>
+                  <p class="skill-description-3d">ES6+, async programming, DOM</p>
+                  <div class="skill-progress-3d">
+                    <div class="progress-sphere" data-percentage="88">
+                      <div class="sphere-inner">
+                        <span class="percentage-text">88%</span>
+                      </div>
+                      <div class="sphere-glow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="detailed-info">
+                    <h5>Key Expertise</h5>
+                    <ul>
+                      <li>Modern ES6+ Features</li>
+                      <li>Async/Await Patterns</li>
+                      <li>DOM Manipulation</li>
+                      <li>API Integration</li>
+                    </ul>
+                    <div class="experience-years">3+ Years</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- React Skill Card -->
+            <div class="skill-card-3d advanced" data-skill="react">
+              <div class="card-inner">
+                <div class="card-front">
+                  <div class="skill-header-3d">
+                    <div class="skill-icon-3d">
+                      <i class="fab fa-react"></i>
+                    </div>
+                    <div class="skill-level-badge advanced">Advanced</div>
+                  </div>
+                  <h4 class="skill-name-3d">React.js</h4>
+                  <p class="skill-description-3d">Hooks, Context API, components</p>
+                  <div class="skill-progress-3d">
+                    <div class="progress-sphere" data-percentage="85">
+                      <div class="sphere-inner">
+                        <span class="percentage-text">85%</span>
+                      </div>
+                      <div class="sphere-glow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-back">
+                  <div class="detailed-info">
+                    <h5>Key Expertise</h5>
+                    <ul>
+                      <li>React Hooks</li>
+                      <li>Context API</li>
+                      <li>Component Architecture</li>
+                      <li>State Management</li>
+                    </ul>
+                    <div class="experience-years">2+ Years</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add similar structure for backend, mobile, and tools categories -->
+        
+      </div>
+      
+      <!-- 3D Skills Summary -->
+      <div class="skills-summary-3d">
+        <div class="summary-card-3d">
+          <div class="summary-icon-3d">
+            <div class="rotating-cube">
+              <div class="cube-face front"><i class="fas fa-code"></i></div>
+              <div class="cube-face back"><i class="fas fa-server"></i></div>
+              <div class="cube-face right"><i class="fas fa-mobile"></i></div>
+              <div class="cube-face left"><i class="fas fa-tools"></i></div>
+              <div class="cube-face top"><i class="fas fa-brain"></i></div>
+              <div class="cube-face bottom"><i class="fas fa-rocket"></i></div>
+            </div>
+          </div>
+          <div class="summary-content">
+            <h4>Total Technologies</h4>
+            <div class="animated-counter" data-target="25">0</div>
+          </div>
+        </div>
+        
+        <div class="summary-card-3d">
+          <div class="summary-icon-3d">
+            <div class="pulsing-sphere">
+              <i class="fas fa-trophy"></i>
+            </div>
+          </div>
+          <div class="summary-content">
+            <h4>Years Experience</h4>
+            <div class="animated-counter" data-target="3">0</div>
+          </div>
+        </div>
+        
+        <div class="summary-card-3d">
+          <div class="summary-icon-3d">
+            <div class="floating-pentagon">
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+          <div class="summary-content">
+            <h4>Expert Level</h4>
+            <div class="animated-counter" data-target="8">0</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">My work</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">Innovative solutions crafted with modern technologies</p>
+        </div>
+        
+        <!-- Enhanced Projects Navigation with 3D Effects -->
+        <div class="projects-navigation-3d">
+          <button class="project-nav-btn-3d active" data-category="all">
+            <div class="btn-face btn-front">
+              <i class="fas fa-layer-group"></i>
+              <span>All Projects</span>
+            </div>
+            <div class="btn-face btn-back">
+              <i class="fas fa-star"></i>
+              <span>Featured</span>
+            </div>
+          </button>
+          <button class="project-nav-btn-3d" data-category="web">
+            <div class="btn-face btn-front">
+              <i class="fas fa-globe"></i>
+              <span>Web Apps</span>
+            </div>
+            <div class="btn-face btn-back">
+              <i class="fas fa-code"></i>
+              <span>Frontend</span>
+            </div>
+          </button>
+          <button class="project-nav-btn-3d" data-category="mobile">
+            <div class="btn-face btn-front">
+              <i class="fas fa-mobile-alt"></i>
+              <span>Mobile</span>
+            </div>
+            <div class="btn-face btn-back">
+              <i class="fab fa-android"></i>
+              <span>Android</span>
+            </div>
+          </button>
+          <button class="project-nav-btn-3d" data-category="fullstack">
+            <div class="btn-face btn-front">
+              <i class="fas fa-server"></i>
+              <span>Full Stack</span>
+            </div>
+            <div class="btn-face btn-back">
+              <i class="fas fa-database"></i>
+              <span>MERN</span>
+            </div>
+          </button>
+        </div>
+        
+        <div class="projects-content-3d">
+          <!-- 3D Projects Showcase -->
+          <div class="projects-showcase-3d">
+            
+            <!-- Featured Projects with 3D Cards -->
+            <div class="project-category-3d active" data-category="all">
+              <div class="category-header-3d">
+                <div class="category-icon-3d">
+                  <div class="icon-cube">
+                    <div class="cube-face front"><i class="fas fa-rocket"></i></div>
+                    <div class="cube-face back"><i class="fas fa-star"></i></div>
+                    <div class="cube-face right"><i class="fas fa-code"></i></div>
+                    <div class="cube-face left"><i class="fas fa-laptop-code"></i></div>
+                    <div class="cube-face top"><i class="fas fa-trophy"></i></div>
+                    <div class="cube-face bottom"><i class="fas fa-medal"></i></div>
+                  </div>
+                </div>
+                <div class="category-title-3d">
+                  <h3>Featured Projects</h3>
+                  <span class="category-subtitle">Showcasing Innovation & Excellence</span>
+                </div>
+                <div class="category-stats-3d">
+                  <div class="stat-circle">
+                    <span class="stat-number">8+</span>
+                    <span class="stat-label">Projects</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="projects-matrix-3d" id="project-list">
+                <!-- Projects will be dynamically generated -->
+              </div>
+            </div>
+          </div>
+          
+          <!-- 3D Summary Section -->
+          <div class="projects-summary-3d">
+            <div class="summary-card-3d">
+              <div class="summary-icon-3d">
+                <div class="rotating-cube">
+                  <div class="cube-face front"><i class="fab fa-github"></i></div>
+                  <div class="cube-face back"><i class="fas fa-code-branch"></i></div>
+                  <div class="cube-face right"><i class="fas fa-star"></i></div>
+                  <div class="cube-face left"><i class="fas fa-heart"></i></div>
+                  <div class="cube-face top"><i class="fas fa-trophy"></i></div>
+                  <div class="cube-face bottom"><i class="fas fa-medal"></i></div>
+                </div>
+              </div>
+              <div class="summary-content">
+                <h4>Open Source</h4>
+                <div class="animated-counter">15+</div>
+                <p>Repositories</p>
+              </div>
+            </div>
+            
+            <div class="summary-card-3d">
+              <div class="summary-icon-3d">
+                <div class="pulsing-sphere">
+                  <i class="fas fa-users"></i>
+                </div>
+              </div>
+              <div class="summary-content">
+                <h4>Collaboration</h4>
+                <div class="animated-counter">50+</div>
+                <p>Commits this month</p>
+              </div>
+            </div>
+            
+            <div class="summary-card-3d">
+              <div class="summary-icon-3d">
+                <div class="floating-pentagon">
+                  <i class="fas fa-rocket"></i>
+                </div>
+              </div>
+              <div class="summary-content">
+                <h4>Innovation</h4>
+                <div class="animated-counter">3+</div>
+                <p>Hackathon Wins</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="projects-cta-3d">
+            <p>Explore more innovative solutions</p>
+            <a href="https://github.com/saranshmishra" target="_blank" rel="noopener" class="btn btn-outline">
+              <i class="fab fa-github"></i>
+              View All on GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">My journey</span>
+          <h2 class="section-title">Experience & Education</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>React.js Developer(Intern)</h3>
+                <span class="timeline-date">2025 - Present</span>                
+                <span class="timeline-company">Celebal Technologies.</span>
+              </div>
+              <div class="timeline-location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Greater Noida, India</span>
+              </div>
+              <div class="timeline-duration">May 2025 - July 2025</div>
+
+              </div>
+              <div class="timeline-body">
+                <p>Developed and maintained responsive web applications using React.js, ensuring seamless user experiences.Collaborated with cross-functional teams to implement UI components and integrate RESTful APIs..</p>
+                <div class="timeline-skills">
+                  <span>React</span>
+                  <span>Node.js</span>
+                  <span>MongoDB</span>
+                  <span>Express</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Project Engineering Intern</h3>                
+                <span class="timeline-company">Technohacks Edutech</span>
+                <span class="timeline-date">Aug 2023 - Sep 2023</span>
+              </div>
+              <div class="timeline-body">
+                <p>Assisted in the planning, execution, and monitoring of engineering projects, ensuring adherence to timelines and quality standards.Collaborated with cross-functional teams (design, development, testing) to deliver project milestones.</p>
+                <div class="timeline-skills">
+                  <span>Project Management</span>
+                  <span>Engineering Design (AutoCAD/SolidWorks)</span>
+                  <span>Systems Engineering</span>
+                  <span>Technical Documentation</span>
+                  <span>Simulation & Modeling (MATLAB/ANSYS)</span>
+                  <span>Quality Assurance & Testing</span>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3>Bachelor's in Information & Technology</h3>
+                <span class="timeline-date">2022 - 2026</span>
+              </div>
+              <div class="timeline-body">
+                <p>Undergraduate in Information & Technology with distinction. Specialized in Software Engineering, Data Structures, and Algorithms.</p>
+                <div class="timeline-skills">
+                  <span>Data Structures</span>
+                  <span>Algorithms</span>
+                  <span>Software Engineering</span>
+                  <span>Database Systems</span>
+                  <span>Machine Learning</span>
+                  <span>Web Development</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Let's connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+        </div>
+        <div class="contact-content">
+          <div class="contact-info">
+            <div class="contact-text">
+              <h3>Let's discuss your next project</h3>
+              <p>
+                I'm always interested in hearing about new opportunities and exciting projects. 
+                Whether you're a company looking to hire, or you're someone with a great idea, 
+                I'd love to hear from you.
+              </p>
+            </div>
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="method-info">
+                  <h4>Email</h4>
+                  <a href="mailto:saransh@example.com">sm6592624@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="method-info">
+                  <h4>Phone</h4>
+                  <a href="tel:+1234567890">+91-9598276192</a>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div class="method-info">
+                  <h4>Location</h4>
+                  <span>India</span>
+                </div>
+              </div>
+            </div>
+            <div class="availability-status">
+              <div class="status-indicator">
+                <div class="status-dot"></div>
+                <span>Available for new projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <p>© 2025 Saransh Mishra. All rights reserved.</p>
+          <p>Built with passion using modern web technologies.</p>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/saranshmishra" target="_blank" rel="noopener" title="GitHub Profile" aria-label="GitHub Profile">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/saransh-mishra" target="_blank" rel="noopener" title="LinkedIn Profile" aria-label="LinkedIn Profile">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://twitter.com/saransh_dev" target="_blank" rel="noopener" title="Twitter Profile" aria-label="Twitter Profile">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" title="Back to Top" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
