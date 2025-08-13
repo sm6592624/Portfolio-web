@@ -270,7 +270,7 @@ class LoadingManager {
   hideLoader() {
     if (this.loader) {
       this.loader.classList.add('hidden');
-      state.isLoading = false;
+      appState.isPageLoading = false;
       setTimeout(() => {
         this.loader.style.display = 'none';
         this.initializeMainContent();
@@ -374,13 +374,13 @@ class NavigationManager {
   }
 
   toggleMobileMenu() {
-    state.isMenuOpen = !state.isMenuOpen;
+    appState.isMenuOpen = !appState.isMenuOpen;
     this.mobileToggle.classList.toggle('active');
     
     // Animate hamburger lines
     const lines = this.mobileToggle.querySelectorAll('.line');
     lines.forEach((line, index) => {
-      if (state.isMenuOpen) {
+      if (appState.isMenuOpen) {
         switch(index) {
           case 0:
             line.style.transform = 'rotate(45deg) translate(5px, 5px)';
@@ -476,7 +476,7 @@ class ProjectShowcase {
   setupProjectDisplay() {
     this.displayProjects();
     this.setupFilterButtons();
-    this.animateProjectCounters();
+    this.initializeCounters();
   }
 
   displayProjects() {
@@ -572,7 +572,7 @@ class ProjectShowcase {
         }, 150);
         
         this.setActiveNavigation(filter);
-        state.currentFilter = filter;
+        appState.currentProjectFilter = filter;
         this.animate3DProjectChange();
       });
 
@@ -1061,7 +1061,7 @@ class ScrollAnimations {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          state.observedElements.add(entry.target);
+          appState.observedElements.add(entry.target);
         }
       });
     }, {
@@ -1247,16 +1247,25 @@ const app = new App();
 // Export for external use
 window.PortfolioApp = {
   app,
-  state,
+  appState,
   config
 };
+
 // Enhanced 3D Skills Manager
-class Enhanced3DSkillsManager extends ModernSkillsManager {
+class Enhanced3DSkillsManager {
   constructor() {
-    super();
     this.init3DEffects();
     this.setupProgressAnimations();
     this.initCounterAnimations();
+  }
+
+  setupProgressAnimations() {
+    // Initialize progress animations for skill bars and spheres
+    const progressElements = document.querySelectorAll('.skill-progress, .progress-sphere');
+    progressElements.forEach(element => {
+      const percentage = element.getAttribute('data-percentage') || 0;
+      element.style.setProperty('--progress', `${percentage}%`);
+    });
   }
 
   init3DEffects() {
