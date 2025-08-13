@@ -16,12 +16,12 @@ const $$ = (selector) => document.querySelectorAll(selector);
 const config = {
   // Text for the typewriter effect in hero section
   typewriterTexts: [
-    "Full Stack Developer",
-    "MERN Stack Expert", 
-    "Machine Learning Enthusiast",
-    "UI/UX Enthusiast",
+    "BTech Student",
+    "Aspiring Full Stack Developer",
+    "MERN Stack Enthusiast", 
+    "Machine Learning Student",
     "Problem Solver",
-    "Tech Innovator"
+    "Future Software Engineer"
   ],
   
   // Animation timings - tweaked these until they felt right

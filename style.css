@@ -72,7 +72,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ========================================
+/* =============================================
    SKILLS SECTION - The fun 3D stuff begins here!
 ======================================== */
 
@@ -759,6 +759,16 @@ body {
     font-size: clamp(2rem, 9vw, 3rem);
     line-height: 1.2;
     text-align: center;
+  }
+  
+  .education-badge {
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    margin-top: var(--space-sm);
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
   }
   
   .hero-subtitle {
@@ -1837,6 +1847,30 @@ body {
   display: inline-block;
   min-width: 0;
   word-break: break-word;
+}
+
+.education-badge {
+  display: block;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-top: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: var(--radius-md);
+  display: inline-block;
+  backdrop-filter: blur(10px);
+  animation: badgeGlow 3s ease-in-out infinite;
+}
+
+@keyframes badgeGlow {
+  0%, 100% { 
+    box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+  }
 }
 
 .hero-subtitle {
